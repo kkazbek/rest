@@ -1,0 +1,18 @@
+package klogist;
+
+option java_package = "kdevelop.klogist.proto";
+option java_outer_classname = "KlogistProtos";
+
+message Person {
+	optional int32 id = 1;
+	optional string name = 2;
+}
+
+message ReqAddPerson {
+	optional Person person = 1;
+}
+
+message RespPerson{
+	required int32 Result = 1 [default = 0];
+	repeated Person person = 2;
+}
